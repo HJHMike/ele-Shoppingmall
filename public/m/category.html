@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fontAwesome/css/font-awesome.css">
+    <link rel="stylesheet/less" href="less/category.less">
+    <script src="less/less.js"></script>
+    <script src="./js/rem.js"></script>
+    <title>自写乐淘</title>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header id="header">
+        <a href="index.html" class="fa fa-arrow-left arrow-left"></a>
+        <form action="#">
+            <input type="text" placeholder="请输入您要搜索的商品">
+        </form>
+        <a href="search.html" class="fa fa-search"></a>
+    </header>
+    <!-- 主体 -->
+    <main id="main">
+        
+        <section class="category-left">
+            <!-- 区域滚动的父容器 -->
+            <div class="mui-scroll-wrapper">
+                <!-- 区域滚动的子容器 -->
+                <div class="mui-scroll">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="category-right">
+            <!-- 区域滚动的父容器 -->
+            <div class="mui-scroll-wrapper">
+                <!-- 区域滚动的子容器 -->
+                <div class="mui-scroll">
+                    <ul>
+                        
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- 底部导航栏 -->
+    <footer id="footer">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <span>首页</span>
+                </a>
+            </li>
+            <li>
+                <a href="category.html" class="active">
+                    <i class="fa fa-bars"></i>
+                    <span>分类</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span>购物车</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-user"></i>
+                    <span>个人中心</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script id="categoryLeftTpl" type="text/html">
+        {{each rows value index}}
+        {{if value.id == 1}}
+            <li class='active'>
+        {{else}}
+            <li>
+        {{/if}}
+                <a href="#" data-id="{{value.id}}">{{value.categoryName}}</a>
+            </li>
+        {{/each}}
+    </script>
+    <script id="categoryRightTpl" type="text/html">
+        {{if rows.length > 0}}
+        {{each rows value}}
+            <li>
+                <a href="#">
+                    <img src="{{value.brandLogo}}" alt="">
+                    <span>{{value.brandName}}</span>
+                </a>
+            </li>
+        {{/each}}
+        {{else}}
+            <span>没有该类型的商品！</span>
+        {{/if}}
+    </script>
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/mui/js/mui.js"></script>
+    <script src="./js/category.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+@import './base.less';
+body{
+    background-color: #fff;
+}
+#header{
+    a{
+        &.arrow-left{
+            left: 0;
+        }
+    }
+}
+
+#main{
+    .mui-scroll{
+        /* 设置一个最小高 当内容没有超过这个最小高就生效这个最小高 超过 是超过的高 */
+        min-height: 100.1%;
+    }
+    font-size: 0.14rem;
+    .content{
+        padding: 0.45rem 0;
+        >ul{
+            &::before{
+                background-color: #fff;
+            }
+            >li{
+                &.product-img{
+                    padding: 0;
+                    img{
+                        width: 100%;
+                    }
+                    &::after{
+                        background-color: #fff;
+                    }
+                }
+                &.title{
+                    font-weight: 700;
+                    .product-title{
+                        font-weight: 400;
+                    }
+                }
+                &.price{
+                    .new-price{
+                        color: red;
+                        font-weight: 700;
+                    }
+                    .old-price{
+                        color: #444;
+                    }
+                }
+                &.size{
+                    span{
+                        line-height: 0.3rem;
+                    }
+                    .active{
+                        background-color: orange;
+                    }
+                }
+                &.mui-active{
+                    background-color: #fff;
+                }
+                &::after{
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+#footer{
+    background-color: #ccc;
+    display: flex;
+    .shoppingCar{
+        // display: inline-block;
+        width: 0.45rem;
+        text-align: center;
+        line-height: 0.45rem;
+        color: #666;
+    }
+    .btn{
+        display: flex;
+        padding: 0.05rem;
+        flex: 1;
+        button{
+            flex: 1;
+            &.btn-add-cart{
+                margin-right: 0.1rem;
+            }
+        }
+    }
+}

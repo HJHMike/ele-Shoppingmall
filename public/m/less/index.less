@@ -1,0 +1,112 @@
+@import './base.less';
+
+#banner{
+    width: 100vw;
+    padding-top: 0.45rem;
+}
+
+
+
+#nav{
+    padding: 0.1rem;
+    >ul{
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 0;
+        line-height: 0;
+        >li{
+            width: 33.33%;
+            >a{
+                display: block;
+                >img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+#brand{
+    font-size: 0;
+    display: flex;
+    padding: 0 0.1rem;
+    .left{
+        flex: 2;
+        a{
+            width: 100%;
+            display: block;
+            margin: 0;
+            img{
+                width: 50%;
+                height: 1.2rem;
+                vertical-align: middle;
+            }
+        }
+    }
+    .right{
+        flex: 1;
+        a{
+            display: block;
+            height: 2.4rem;
+            img{
+                width: 100%;
+                height: 2.4rem;
+            }
+        }
+    }
+    
+}
+
+#brand-bottom{
+    padding: 0.1rem;
+    .title1{
+        width: 100%;
+    }
+    .box-brand{  
+        padding-bottom: 10px;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                width: 25%;
+                img{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .title2{
+        width: 100%;
+    }
+    .box-product{
+        .life-product{
+            display: flex;
+            >a{
+                flex: 1;
+                text-align: center;
+                box-shadow: 0 0 1px 0 #ccc;
+                >img{
+                    width: 100%;
+                }
+                >p{
+                    text-align: center;
+                }
+                >button{
+                    margin-bottom: 0.1rem;
+                }
+            }
+        }
+        .women-product{
+            padding: 0.1rem 0;
+            img{
+                width: 100%;
+            }
+        }
+        .men-product{
+            padding-bottom: 0.34rem;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,54 @@
+@import 'base.less';
+
+#main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+	background-color: #fff;
+    #search{
+        padding: 0.1rem;
+        form{
+            display: flex;
+            input{
+                flex: 1;
+                height: 0.34rem;
+                border: 1px solid @main-color;
+                border-radius: 0.06rem;
+                border-right: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                margin: 0;
+            }
+            button{
+                width: 0.6rem;
+                height: 0.34rem;
+                background-color: @main-color;
+                border: none;
+                border-radius: 0.06rem;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+            }
+        }
+        
+    }
+    #history{
+        .mui-card{
+            .mui-card-header{
+                span{
+                    font-size: 0.14rem;
+                }
+                a{
+                    color: #666;
+                }
+            }
+            .mui-table-view{
+                >li{
+                    span{
+                        z-index: 999;
+                    }
+                }
+            }
+        }
+    }
+}
+

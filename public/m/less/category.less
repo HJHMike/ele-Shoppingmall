@@ -1,0 +1,77 @@
+@import 'base.less';
+
+#header{
+    form{
+        flex: 1;
+        padding: 0 0.45rem;
+        padding-top: 0.05rem;
+        input{
+            width: 100%;
+            height: 0.34rem;
+            font-size: 0.14rem;
+            border-radius: 0.06rem;
+        }
+    }
+}
+
+#main{
+    background-color: #ccc;
+    height: 100vh;
+    display: flex;
+    .category-left{
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 0.8rem;
+        .mui-scroll{
+			/* 设置一个最小高 当内容没有超过这个最小高就生效这个最小高 超过 是超过的高 */
+			min-height: 100.1%;
+		}
+        ul{
+            li{
+                background-color: #fff;
+                &.active{
+                    background-color: #ccc;
+                }
+                a{
+                    display: block;
+                    height: 0.45rem;
+                    border-bottom: 1px #ccc solid;
+                    border-right: 1px #ccc solid;
+                    text-align: center;
+                    line-height: 0.45rem;
+                    color: #666;
+                    font-size: 0.14rem;
+                }
+            }
+        }
+    }
+    .category-right{
+        position: relative;
+        flex: 1;
+        .mui-scroll{
+			/* 设置一个最小高 当内容没有超过这个最小高就生效这个最小高 超过 是超过的高 */
+			min-height: 100.1%;
+            padding: 0 0.1rem;
+		}
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                margin-top: 0.1rem;
+                width: 33.33%;
+                background-color: #fff;
+                text-align: center;
+                a{
+                    img{
+                        width: 100%;
+                    }
+                    span{
+                        font-size: 0.14rem;
+                        color: #666;
+                    }
+                }
+            }
+        }
+    }
+}
